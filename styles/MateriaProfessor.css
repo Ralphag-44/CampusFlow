@@ -198,6 +198,10 @@ table, th, td{
     width: 100%;
 }
 
+.btn_presenca{
+    width:100%;
+}
+
 th, td{
     width: 100px;
 }
@@ -219,6 +223,7 @@ td input{
     align-items: center;
     height: 100%;
 }
+
 
 .Tarefas_menu_postatadas{
     background-color: rgb(56, 179, 138);
