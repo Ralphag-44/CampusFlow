@@ -224,6 +224,7 @@
                                 </tr>
                             </table>
                         </div>
+
                     </div>
                     <div class="viewItem">
                         <h2>Notas</h2>
@@ -389,14 +390,7 @@
             var pop_up_tarefa = document.querySelector('.pop_up_tarefa');
             var enviar_tarefa_btn = document.querySelector('.enviar_tarefa_btn');
             var container = document.querySelector('.container');
-            var presenca_btn = document.querySelectorAll('.presenca_btn');
-            var presenca_row = document.querySelectorAll('.presenca_row');
-            
-            for(var i =0; i<presenca_btn.length; i++){
-                presenca_btn[i].addEventListener('click', function(){
-                    presenca_row[].value = 2
-                })
-            }
+
             selectedItem.forEach(selected =>{
                 selected.addEventListener('click', function(){
                     selectedNumber = Number(selected.getAttribute("value"))
