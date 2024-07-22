@@ -27,6 +27,7 @@ nav {
     color: black;
     font-weight: bold;
     position: relative;
+     height:10vh;
 }
 .descricao p
 {   margin-left: 3vw;
