@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/login.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>CampusFlow</h1>
+        </header>
+        <main>
+            <h1>
+                Entrar no Sistema
+            </h1>
+            <form>
+                <fieldset>
+                    <input type="number" placeholder="Matricula ou Nº de Vínculo">
+                    <input type="password" placeholder="Senha">
+                    <p class="password" onclick="javascript: password(this)">Esqueci minha senha</p>
+                    <select class="type">
+                        <option value="" selected disabled hidden>Selecionar</option>
+                        <option value="1">Discente</option>
+                        <option value="2">Docente</option>
+                        <option value="3">Administração</option>
+                    </select>
+                    <button type="button" class="submit">Enviar</button>
+                </fieldset>
+            </form>
+        </main>
+        <footer>
+            2024 CampusFlow. Todos os direitos reservados
+        </footer>
+    </div>
+    
+</body>
+</html>
