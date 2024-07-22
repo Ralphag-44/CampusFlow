@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        html, body {
+            height: 100%;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #008A8A;
+            box-shadow: 0px 0px 10px black;
+            color: white;
+            width: 100%;
+        }
+        header h1 {
+            margin-left: 1vw;
+            cursor: pointer;
+        }
+        nav {
+            display: flex;
+            flex-direction: row;
+            height: 2vw;
+            width: 40%;
+            align-items: center;
+            justify-content: space-around;
+            position: relative;
+        }
+        nav button {
+            padding: 0.2vw;
+            text-align: center;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 0.2vw;
+            background-color: #008A8A;
+            color: white;
+            border: 0;
+        }
+        nav button:hover {
+            background-color: aquamarine;
+            color: black;
+        }
+        main {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            z-index: 3;
+            position: relative;
+            padding: 2vw;
+            flex-grow: 1;
+        }
+        .dataSection {
+            background-color: aquamarine;
+            color: black;
+            font-weight: bold;
+            width: 100%;
+            padding: 2vw;
+            border-radius: 1vw;
+            box-shadow: 0px 0px 10px black;
+            margin-bottom: 2vw;
+        }
+        .dataSection h2 {
+            color: #008A8A;
+            margin-bottom: 1vw;
+        }
+        .dataSection table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .dataSection table, .dataSection th, .dataSection td {
+            border: 1px solid #008A8A;
+        }
+        .dataSection th, .dataSection td {
+            padding: 0.5vw;
+            text-align: left;
+        }
+        .dataSection th {
+            background-color: #008A8A;
+            color: white;
+        }
+        .dataSection input, .dataSection select {
+            width: 100%;
+            padding: 0.3vw;
+            border: 1px solid #008A8A;
+            border-radius: 0.3vw;
+        }
+        .cadastrarSection {
+            background-color: aquamarine;
+            color: black;
+            font-weight: bold;
+            width: 100%;
+            padding: 2vw;
+            border-radius: 1vw;
+            box-shadow: 0px 0px 10px black;
+            margin-bottom: 2vw;
+        }
+        .cadastrarSection h2 {
+            color: #008A8A;
+            margin-bottom: 1vw;
+        }
+        .cadastrarSection form {
+            display: flex;
+            flex-direction: column;
+        }
+        .cadastrarSection label {
+            margin: 0.5vw 0;
+        }
+        .cadastrarSection input[type="text"], .cadastrarSection input[type="number"], .cadastrarSection textarea {
+            padding: 0.5vw;
+            margin-bottom: 1vw;
+            border: 1px solid #008A8A;
+            border-radius: 0.3vw;
+        }
+        .cadastrarSection button {
+            padding: 0.5vw;
+            border: none;
+            border-radius: 0.3vw;
+            background-color: #008A8A;
+            color: white;
+            cursor: pointer;
+        }
+        .cadastrarSection button:hover {
+            background-color: aquamarine;
+            color: black;
+        }
+        footer {
+            width: 100%;
+            height: 10vh;
+            background-color: #008A8A;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 0px 10px black;
+        }
+    </style>
+    <script>
+        function navigateTo(page) {
+            document.location.href = `${page}.html`;
+        }
+
+        function cadastrarCurso(event) {
+            event.preventDefault();
+            alert('Curso cadastrado com sucesso.');
+            document.getElementById('cadastrarCursoForm').reset();
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 onclick="javascript: document.location.href = '3.html'">CampusFlow</h1>
+            <nav>
+                <button onclick="navigateTo('campus')">CAMPUS</button>
+                <button onclick="navigateTo('docentes')">DOCENTES</button>
+                <button onclick="navigateTo('discentes')">DISCENTES</button>
+                <button onclick="navigateTo('cursos')">CURSOS</button>
+            </nav>
+        </header>
+        <main>
+            <div class="dataSection">
+                <h2>Cursos Existentes</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Objetivo</th>
+                            <th>Número de Docentes</th>
+                            <th>Carga Horária</th>
+                            <th>Número de Alunos Matriculados</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Técnico em Informática</td>
+                            <td>Preparar profissionais para o mercado de TI.</td>
+                            <td>10</td>
+                            <td>1200 horas</td>
+                            <td>200</td>
+                        </tr>
+                        <tr>
+                            <td>Técnico em Administração</td>
+                            <td>Formar profissionais aptos para atuar na área administrativa.</td>
+                            <td>8</td>
+                            <td>1000 horas</td>
+                            <td>150</td>
+                        </tr>
+                        <tr>
+                            <td>Engenharia de Software</td>
+                            <td>Desenvolver habilidades para engenharia e desenvolvimento de software.</td>
+                            <td>15</td>
+                            <td>3000 horas</td>
+                            <td>300</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="cadastrarSection">
+                <h2>Cadastrar Novo Curso</h2>
+                <form id="cadastrarCursoForm" onsubmit="cadastrarCurso(event)">
+                    <label for="nomeCurso">Nome do Curso:</label>
+                    <input type="text" id="nomeCurso" name="nomeCurso" required>
+                    <label for="objetivoCurso">Objetivo do Curso:</label>
+                    <textarea id="objetivoCurso" name="objetivoCurso" required></textarea>
+                    <label for="numeroDocentes">Número de Docentes:</label>
+                    <input type="number" id="numeroDocentes" name="numeroDocentes" required>
+                    <label for="cargaHoraria">Carga Horária:</label>
+                    <input type="number" id="cargaHoraria" name="cargaHoraria" required>
+                    <label for="numeroAlunos">Número Esperado de Alunos Matriculados:</label>
+                    <input type="number" id="numeroAlunos" name="numeroAlunos" required>
+                    <label for="departamento">Departamento:</label>
+                    <input type="text" id="departamento" name="departamento" required>
+                    <label for="coordenador">Coordenador do Curso:</label>
+                    <input type="text" id="coordenador" name="coordenador" required>
+                    <label for="duracao">Duração do Curso (em semestres):</label>
+                    <input type="number" id="duracao" name="duracao" required>
+                    <button type="submit">Cadastrar</button>
+                </form>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2024 CampusFlow. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+</body>
+</html>

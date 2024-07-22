@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            overflow: hidden;
+        }
+        html, body {
+            height: 100%;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #008A8A;
+            box-shadow: 0px 0px 10px black;
+            color: white;
+            width: 100%;
+        }
+        header h1 {
+            margin-left: 1vw;
+            cursor: pointer;
+        }
+        nav {
+            display: flex;
+            flex-direction: row;
+            height: 2vw;
+            width: 40%;
+            align-items: center;
+            justify-content: space-around;
+            position: relative;
+        }
+        nav button {
+            padding: 0.2vw;
+            text-align: center;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 0.2vw;
+            background-color: #008A8A;
+            color: white;
+            border: 0;
+        }
+        nav button:hover {
+            background-color: aquamarine;
+            color: black;
+        }
+        main {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            z-index: 3;
+            position: relative;
+            padding: 2vw;
+            flex-grow: 1;
+        }
+        .dataSection {
+            background-color: aquamarine;
+            color: black;
+            font-weight: bold;
+            width: 100%;
+            padding: 2vw;
+            border-radius: 1vw;
+            box-shadow: 0px 0px 10px black;
+            margin-bottom: 2vw;
+        }
+        .dataSection h2 {
+            color: #008A8A;
+            margin-bottom: 1vw;
+        }
+        footer {
+            width: 100%;
+            height: 10vh;
+            background-color: #008A8A;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 0px 10px black;
+        }
+    </style>
+    <script>
+        function navigateTo(page) {
+            document.location.href = `${page}.html`;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 onclick="javascript: document.location.href = '3.html'">CampusFlow</h1>
+            <nav>
+                <button onclick="navigateTo('campus')">CAMPUS</button>
+                <button onclick="navigateTo('docentes')">DOCENTES</button>
+                <button onclick="navigateTo('discentes')">DISCENTES</button>
+                <button onclick="navigateTo('cursos')">CURSOS</button>
+            </nav>
+        </header>
+        <main>
+            <div class="dataSection">
+                <h2>Dados Financeiros</h2>
+                <p>Orçamento Anual: R$ 2.000.000,00</p>
+                <p>Despesas com Infraestrutura: R$ 500.000,00</p>
+                <p>Despesas com Pessoal: R$ 1.000.000,00</p>
+                <p>Outras Despesas: R$ 500.000,00</p>
+            </div>
+            <div class="dataSection">
+                <h2>Dados Burocráticos</h2>
+                <p>Licenças e Alvarás: Todos em dia</p>
+                <p>Documentação de Funcionamento: Regularizada</p>
+                <p>Contratos Vigentes: 15 contratos ativos</p>
+                <p>Fiscalizações: Última fiscalização em Janeiro de 2024</p>
+            </div>
+        </main>
+    </div>
+    <footer>
+        2024 CampusFlow. Todos os direitos reservados
+    </footer>
+</body>
+</html>

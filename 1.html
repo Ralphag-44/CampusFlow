@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aluno</title>
+    <link rel="stylesheet" href="styles/1.css">
+    <script src="scripts/aluno.js" defer></script>
+    <script src="scripts/padrao.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 onclick="javascript: document.location.href = '1.html'">CampusFlow</h1>
+            <div class="description">
+                <p class="name">Fulano de tal</p>
+                <p class="local">Campos de algum canto</p>
+                <p class="cursando">Tecnico em alguma coisa</p>
+                <div class="timer">timer: 1000</div>
+            </div>
+            <nav>
+                <div class="menu" onclick="myFunction(this), aside()">    
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+                <button class="docs">
+                    Documentação
+                </button>
+                <button onclick="aluno_ac()">
+                    Atividades d. Campo
+                </button>
+                <button class="direcao" onclick="dis_dire()">
+                    Direção
+                </button>
+            </nav>
+        </header>
+        <main>
+            <div class="docsOn">
+                <div>Emitir Boletim</div>
+                <div>Emitir Histórico</div>
+                <div>Declaração de vinculo</div>
+                <div>Calendário de Acadêmico</div>
+            </div>
+            <div class="caixaEntrada">
+                <h1>Caixa de Entrada</h1>
+                <div class="block">
+                </div>
+            </div>
+            <div class="perfil">
+                <div class="photo"></div>
+                <div class="description2">
+                    <p class="matricula">Mátricula:</p>
+                    <p class="">Curso:</p>
+                    <p>Nivel:</p>
+                    <p>Email:</p>
+                </div>
+            </div>
+
+        </main>
+        <aside id="aside">
+            <div class="caixaMateria">
+                <h1>Disciplinas</h1>
+                <div class="blockAside">
+                </div>
+            </div>
+        </aside>
+        <footer>
+            2024 CampusFlow. Todos os direitos reservados
+        </footer>
+    </div>
+</body>
+</html>

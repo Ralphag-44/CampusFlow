@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Projetos</title>
+    <script src="scripts/prof.js" defer></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background-color: #008A8A;
+            box-shadow: 0px 0px 10px black;
+            color: white;
+            width: 100%;
+        }
+
+        header h1 {
+            margin-left: 1vw;
+        }
+
+        .coloredBar {
+            height: 10px;
+            background-color: aquamarine;
+            width: 100%;
+        }
+
+        nav {
+            display: flex;
+            padding: 1vw;
+        }
+
+        .navBtns {
+            display: flex;
+        }
+
+        .navBtns p, .navBtns a {
+            color: white;
+            text-decoration: none;
+            margin-left: 10vw;
+            margin-top: 8px;
+            padding: 2px;
+            padding-inline: 6px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navBtns .modoAluno:hover, .navBtns a:hover {
+            background-color: aquamarine;
+            color: black;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .navMenuBtn {
+            margin-left: 5vw;
+            cursor: pointer;
+            width: 4vw;
+            height: 6vh;
+            display: flex;
+            border-radius: 5px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .navMenuBtn:hover {
+            .bar1, .bar2, .bar3 {
+                background-color: black;
+            }
+            background-color: aquamarine;
+        }
+
+        .bar1, .bar2, .bar3 {
+            width: 35px;
+            height: 5px;
+            background-color: aquamarine;
+            margin: 2.8px 20px;
+            transition: 0.4s;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 150px); /* 100vh menos o espaço usado pelo header e footer */
+            padding: 2vw;
+        }
+
+        .main-img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px black;
+        }
+
+        footer {
+            width: 100vw;
+            height: 10vw;
+            background-color: #008A8A;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 0px 10px black;
+        }
+    </style>
+    <link rel="stylesheet" href="styles/style2.css">
+    <link rel="stylesheet" href="styles/2.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="MateriaProfessor.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div>
+                <h1>CampusFlow</h1>
+            </div>
+            <div class="coloredBar"></div>
+            <nav>
+                <a href="2.html" class="material-symbols-outlined Voltar">
+                    home
+                </a>
+                <div class="navBtns">
+                    <a href="docente_projeto.html">Projetos</a>
+                    <a href="calendario.html">Calendario</a>
+                    <p class="modoAluno">Modo Aluno</p>
+                    <p class="timer">Timer: 1000</p>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <img src="imgs/calendario.png" alt="Imagem Centralizada" class="main-img">
+        </main>
+        <footer>
+            2024 CampusFlow. Todos os direitos reservados
+        </footer>
+    </div>
+    <script>
+        let timer = setInterval(timerLoop, 1000);
+        let timerCount = (document.querySelector('.timer')).innerHTML.slice(7);
+        let timerBefore = (document.querySelector('.timer')).innerHTML.slice(0, 7);
+
+        function timerLoop() {
+            let timerCount = (document.querySelector('.timer')).innerHTML.slice(7);
+            let timerBefore = (document.querySelector('.timer')).innerHTML.slice(0, 7);
+            document.querySelector('.timer').innerHTML = timerBefore + (Number(timerCount) - 1);
+        }
+    </script>
+</body>
+</html>

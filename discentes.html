@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discentes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        html, body {
+            height: 100%;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #008A8A;
+            box-shadow: 0px 0px 10px black;
+            color: white;
+            width: 100%;
+        }
+        header h1 {
+            margin-left: 1vw;
+            cursor: pointer;
+        }
+        nav {
+            display: flex;
+            flex-direction: row;
+            height: 2vw;
+            width: 40%;
+            align-items: center;
+            justify-content: space-around;
+            position: relative;
+        }
+        nav button {
+            padding: 0.2vw;
+            text-align: center;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 0.2vw;
+            background-color: #008A8A;
+            color: white;
+            border: 0;
+        }
+        nav button:hover {
+            background-color: aquamarine;
+            color: black;
+        }
+        main {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            z-index: 3;
+            position: relative;
+            padding: 2vw;
+            flex-grow: 1;
+        }
+        .dataSection {
+            background-color: aquamarine;
+            color: black;
+            font-weight: bold;
+            width: 100%;
+            padding: 2vw;
+            border-radius: 1vw;
+            box-shadow: 0px 0px 10px black;
+            margin-bottom: 2vw;
+        }
+        .dataSection h2 {
+            color: #008A8A;
+            margin-bottom: 1vw;
+        }
+        .dataSection table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .dataSection table, .dataSection th, .dataSection td {
+            border: 1px solid #008A8A;
+        }
+        .dataSection th, .dataSection td {
+            padding: 0.5vw;
+            text-align: left;
+        }
+        .dataSection th {
+            background-color: #008A8A;
+            color: white;
+        }
+        .dataSection input, .dataSection select {
+            width: 100%;
+            padding: 0.3vw;
+            border: 1px solid #008A8A;
+            border-radius: 0.3vw;
+        }
+        .abonarSection {
+            background-color: aquamarine;
+            color: black;
+            font-weight: bold;
+            width: 100%;
+            padding: 2vw;
+            border-radius: 1vw;
+            box-shadow: 0px 0px 10px black;
+            margin-bottom: 2vw;
+        }
+        .abonarSection h2 {
+            color: #008A8A;
+            margin-bottom: 1vw;
+        }
+        .abonarSection form {
+            display: flex;
+            flex-direction: column;
+        }
+        .abonarSection label {
+            margin: 0.5vw 0;
+        }
+        .abonarSection input[type="text"], .abonarSection input[type="date"], .abonarSection input[type="file"] {
+            padding: 0.5vw;
+            margin-bottom: 1vw;
+            border: 1px solid #008A8A;
+            border-radius: 0.3vw;
+        }
+        .abonarSection button {
+            padding: 0.5vw;
+            border: none;
+            border-radius: 0.3vw;
+            background-color: #008A8A;
+            color: white;
+            cursor: pointer;
+        }
+        .abonarSection button:hover {
+            background-color: aquamarine;
+            color: black;
+        }
+        footer {
+            width: 100%;
+            height: 10vh;
+            background-color: #008A8A;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 0px 10px black;
+        }
+    </style>
+    <script>
+        function navigateTo(page) {
+            document.location.href = `${page}.html`;
+        }
+
+        function editRow(row) {
+            let inputs = row.querySelectorAll('input, select');
+            for (let input of inputs) {
+                input.disabled = !input.disabled;
+            }
+        }
+
+        function abonarFaltas(event) {
+            event.preventDefault();
+            alert('Faltas Abonadas com Sucesso. O Discente e os Docentes Serão Automaticamente Comunicados.');
+            document.getElementById('abonarFaltasForm').reset();
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 onclick="javascript: document.location.href = '3.html'">CampusFlow</h1>
+            <nav>
+                <button onclick="navigateTo('campus')">CAMPUS</button>
+                <button onclick="navigateTo('docentes')">DOCENTES</button>
+                <button onclick="navigateTo('discentes')">DISCENTES</button>
+                <button onclick="navigateTo('cursos')">CURSOS</button>
+            </nav>
+        </header>
+        <main>
+            <div class="dataSection">
+                <h2>Discentes</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Curso</th>
+                            <th>Série</th>
+                            <th>Turma</th>
+                            <th>Status</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" value="Aluno A" disabled></td>
+                            <td><input type="text" value="Curso 1" disabled></td>
+                            <td><input type="text" value="1ª" disabled></td>
+                            <td><input type="text" value="A" disabled></td>
+                            <td>
+                                <select disabled>
+                                    <option value="regular">REGULAR</option>
+                                    <option value="formado">FORMADO</option>
+                                    <option value="trancado">TRANCADO</option>
+                                    <option value="desistente">DESISTENTE</option>
+                                </select>
+                            </td>
+                            <td><button onclick="editRow(this.parentNode.parentNode)">Editar</button></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" value="Aluno B" disabled></td>
+                            <td><input type="text" value="Curso 2" disabled></td>
+                            <td><input type="text" value="2ª" disabled></td>
+                            <td><input type="text" value="B" disabled></td>
+                            <td>
+                                <select disabled>
+                                    <option value="regular">REGULAR</option>
+                                    <option value="formado">FORMADO</option>
+                                    <option value="trancado">TRANCADO</option>
+                                    <option value="desistente">DESISTENTE</option>
+                                </select>
+                            </td>
+                            <td><button onclick="editRow(this.parentNode.parentNode)">Editar</button></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" value="Aluno C" disabled></td>
+                            <td><input type="text" value="Curso 3" disabled></td>
+                            <td><input type="text" value="3ª" disabled></td>
+                            <td><input type="text" value="C" disabled></td>
+                            <td>
+                                <select disabled>
+                                    <option value="regular">REGULAR</option>
+                                    <option value="formado">FORMADO</option>
+                                    <option value="trancado">TRANCADO</option>
+                                    <option value="desistente">DESISTENTE</option>
+                                </select>
+                            </td>
+                            <td><button onclick="editRow(this.parentNode.parentNode)">Editar</button></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" value="Aluno D" disabled></td>
+                            <td><input type="text" value="Curso 4" disabled></td>
+                            <td><input type="text" value="4ª" disabled></td>
+                            <td><input type="text" value="D" disabled></td>
+                            <td>
+                                <select disabled>
+                                    <option value="regular">REGULAR</option>
+                                    <option value="formado">FORMADO</option>
+                                    <option value="trancado">TRANCADO</option>
+                                    <option value="desistente">DESISTENTE</option>
+                                </select>
+                            </td>
+                            <td><button onclick="editRow(this.parentNode.parentNode)">Editar</button></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" value="Aluno E" disabled></td>
+                            <td><input type="text" value="Curso 5" disabled></td>
+                            <td><input type="text" value="5ª" disabled></td>
+                            <td><input type="text" value="E" disabled></td>
+                            <td>
+                                <select disabled>
+                                    <option value="regular">REGULAR</option>
+                                    <option value="formado">FORMADO</option>
+                                    <option value="trancado">TRANCADO</option>
+                                    <option value="desistente">DESISTENTE</option>
+                                </select>
+                            </td>
+                            <td><button onclick="editRow(this.parentNode.parentNode)">Editar</button></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" value="Aluno F" disabled></td>
+                            <td><input type="text" value="Curso 6" disabled></td>
+                            <td><input type="text" value="6ª" disabled></td>
+                            <td><input type="text" value="F" disabled></td>
+                            <td>
+                                <select disabled>
+                                    <option value="regular">REGULAR</option>
+                                    <option value="formado">FORMADO</option>
+                                    <option value="trancado">TRANCADO</option>
+                                    <option value="desistente">DESISTENTE</option>
+                                </select>
+                            </td>
+                            <td><button onclick="editRow(this.parentNode.parentNode)">Editar</button></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" value="Aluno G" disabled></td>
+                            <td><input type="text" value="Curso 7" disabled></td>
+                            <td><input type="text" value="7ª" disabled></td>
+                            <td><input type="text" value="G" disabled></td>
+                            <td>
+                                <select disabled>
+                                    <option value="regular">REGULAR</option>
+                                    <option value="formado">FORMADO</option>
+                                    <option value="trancado">TRANCADO</option>
+                                    <option value="desistente">DESISTENTE</option>
+                                </select>
+                            </td>
+                            <td><button onclick="editRow(this.parentNode.parentNode)">Editar</button></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" value="Aluno H" disabled></td>
+                            <td><input type="text" value="Curso 8" disabled></td>
+                            <td><input type="text" value="8ª" disabled></td>
+                            <td><input type="text" value="H" disabled></td>
+                            <td>
+                                <select disabled>
+                                    <option value="regular">REGULAR</option>
+                                    <option value="formado">FORMADO</option>
+                                    <option value="trancado">TRANCADO</option>
+                                    <option value="desistente">DESISTENTE</option>
+                                </select>
+                            </td>
+                            <td><button onclick="editRow(this.parentNode.parentNode)">Editar</button></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" value="Aluno I" disabled></td>
+                            <td><input type="text" value="Curso 9" disabled></td>
+                            <td><input type="text" value="9ª" disabled></td>
+                            <td><input type="text" value="I" disabled></td>
+                            <td>
+                                <select disabled>
+                                    <option value="regular">REGULAR</option>
+                                    <option value="formado">FORMADO</option>
+                                    <option value="trancado">TRANCADO</option>
+                                    <option value="desistente">DESISTENTE</option>
+                                </select>
+                            </td>
+                            <td><button onclick="editRow(this.parentNode.parentNode)">Editar</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="abonarSection">
+                <h2>Abonar Faltas</h2>
+                <form id="abonarFaltasForm" onsubmit="abonarFaltas(event)" enctype="multipart/form-data">
+                    <label for="matricula">Número de Matrícula:</label>
+                    <input type="text" id="matricula" name="matricula" required>
+                    <label for="inicio">Data de Início:</label>
+                    <input type="date" id="inicio" name="inicio" required>
+                    <label for="fim">Data de Fim:</label>
+                    <input type="date" id="fim" name="fim" required>
+                    <label for="documento">Anexar Documento:</label>
+                    <input type="file" id="documento" name="documento" required>
+                    <button type="submit">Abonar</button>
+                </form>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2024 CampusFlow. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+</body>
+</html>

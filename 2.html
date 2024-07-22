@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/style2.css">
+    <link rel="stylesheet" href="styles/2.css">
+    <script src="scripts/prof.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div>
+                <h1>CampusFlow</h1>
+            </div>
+            <div class="coloredBar"></div>
+            <nav>
+                <div class="navMenuBtn">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+                <div class="navBtns">
+                    <a href="docente_projeto.html">Projetos</a>
+                    <a href="calendario.html">Calendario</a>
+                    <p class="modoAluno">Modo Aluno</p>
+                    <p class="timer">Timer: 1000</p>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="content">
+                <div class="caixa_de_mensagens">
+                    <h2>Mensagens</h2>
+                    <div>
+                        <p>Lorem</p>
+                        <p>Ipsum</p>
+                        <p>Lisan Al ghaib</p>
+                        <p>hola amigos</p>
+                        <p>como estam</p>
+                        <p>ache o mapa</p>
+                        <p>raposo nao pegue</p>
+                        <p>Lorem</p>
+                        <p>Ipsum</p>
+                        <p>Lisan Al ghaib</p>
+                        <p>hola amigos</p>
+                        <p>como estam</p>
+                        <p>ache o mapa</p>
+                        <p>raposo nao pegue</p>
+                    </div>
+                </div>
+                <div class="profile">
+                    <div class="pictureFrame"><img src="imgs/no_picture.png" alt=""></div>
+                    <div class="ProfileData">
+                        <div class="Data">nome: <p class="answer">Josemar Almeida</p></div>
+                        <div class="Data">cpf: <p class="answer">99999999999</p></div>
+                        <div class="Data">N° de vínculo: <p class="answer">123456789</p></div>
+                        <div class="Data">Email: <p class="answer">josemar157@gmail.com</p></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            2024 CampusFlow. Todos os direitos reservados
+        </footer>
+        <div class="navMenu">
+            <p class="closeBtn">X</p>
+            <a href="materia.html">Materia X</a>
+            <a href="materia.html">Materia Y</a>
+            <a href="materia.html">Materia Z</a>
+            <a href="materia.html">Minhas Turmas</a>
+        </div>
+    </div>
+
+
+    <script>
+        var menuBtn = document.querySelector(".navMenuBtn")
+        var menu = document.querySelector(".navMenu")
+        var menuCloseBtn = document.querySelector(".closeBtn")
+
+        menuBtn.addEventListener("click", function(){
+            menu.classList.add("menuOpen");
+        })
+
+        menuCloseBtn.addEventListener("click", function(){
+            menu.classList.remove("menuOpen");
+        })
+
+
+        let timer = setInterval(timerLoop,1000)
+        let timerCount = (document.querySelector('.timer')).innerHTML.slice(7)
+        let timerBefore = (document.querySelector('.timer')).innerHTML.slice(0,7)
+
+
+        function timerLoop()
+        {   let timerCount = (document.querySelector('.timer')).innerHTML.slice(7)
+            let timerBefore = (document.querySelector('.timer')).innerHTML.slice(0,7)
+            document.querySelector('.timer').innerHTML = timerBefore+(Number(timerCount)-1)
+        }
+    </script>
+</body>
+</html>

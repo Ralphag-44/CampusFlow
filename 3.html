@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administração</title>
+    <link rel="stylesheet" href="styles/admin.css">
+    <script src="scripts/admin.js" defer></script>
+    <script src="scripts/padrao.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 onclick="javascript: document.location.href = '3.html'">CampusFlow</h1>
+            <nav>
+                <button onclick="navigateTo('campus')">CAMPUS</button>
+                <button onclick="navigateTo('docentes')">DOCENTES</button>
+                <button onclick="navigateTo('discentes')">DISCENTES</button>
+                <button onclick="navigateTo('cursos')">CURSOS</button>
+            </nav>
+        </header>
+        <main>
+            <div class="adminInfo">
+                <div class="photo"></div>
+                <div class="description2">
+                    <h2>Dados da Administração</h2>
+                    <p>Nome do Administrador</p>
+                    <p>Email do Administrador</p>
+                    <p>Localização do Campus</p>
+                </div>
+            </div>
+            <div class="messageBox">
+                <h2>Enviar Mensagem</h2>
+                <textarea placeholder="Digite sua mensagem aqui..."></textarea>
+                <div class="sendOptions">
+                    <button onclick="sendMessage('docentes')">Enviar para Docentes</button>
+                    <button onclick="sendMessage('discentes')">Enviar para Discentes</button>
+                    <button onclick="sendMessage('todos')">Enviar para Todos</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer>
+        2024 CampusFlow. Todos os direitos reservados
+    </footer>
+</body>
+</html>

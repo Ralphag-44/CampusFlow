@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materia</title>
+    <link rel="stylesheet" href="styles/materia.css">
+    <script src="scripts/padrao.js" defer></script>
+    <script src="scripts/materia.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 onclick="javascript: document.location.href = '1.html'">CampusFlow</h1>
+            <div class="description">
+                <p class="name">Fulano de tal</p>
+                <p class="local">Campos de algum canto</p>
+                <p class="cursando">Tecnico em alguma coisa</p>
+                <div class="timer" onclick="liberaGame()">timer: 1000</div>
+            </div>
+            <nav>
+                <div class="menu" onclick="myFunction(this), aside()">    
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+                <button class="docs">
+                    Documentação
+                </button>
+                <button onclick="aluno_ac()">
+                    Atividades d. Campo
+                </button>
+                <button class="direcao" onclick="dis_dire()">
+                    Direção
+                </button>
+            </nav>
+        </header>
+        <main>
+            <div class="docsOn">
+                <div>Emitir Boletim</div>
+                <div>Emitir Histórico</div>
+                <div>Declaração de vinculo</div>
+                <div>Calendário de Acadêmico</div>
+            </div>
+
+            <h1 class="title">Menu da Disciplina</h1>
+            <div class="sideMenu">
+                <button class="1 chose" onclick="chose(this), blockContent(this)">Atividades</button>
+                <button class="2" onclick="chose(this), blockContent(this)">Materias</button>
+                <button class="3" onclick="chose(this), blockContent(this)">Presença</button>
+                <button class="4" onclick="chose(this), blockContent(this)">Chat</button>
+            </div>
+            <div class="content aux">
+            </div>
+        </main>
+        <aside id="aside">
+            <div class="caixaMateria">
+                <h1>Matérias</h1>
+                <div class="blockAside">
+                </div>
+            </div>
+        </aside>
+        <footer>
+            2024 CampusFlow. Todos os direitos reservados
+        </footer>
+    </div>
+</body>
+</html>

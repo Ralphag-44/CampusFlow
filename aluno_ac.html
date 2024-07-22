@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividades de Campo</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        html, body {
+            height: 100%;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            align-items: center;
+        }
+        header {
+            background-color: #008A8A;
+            box-shadow: 0px 0px 10px black;
+            color: white;
+            width: 100%;
+            position: relative;
+        }
+        header h1 {
+            margin-left: 1vw;
+            cursor: pointer;
+        }
+        nav {
+            display: flex;
+            flex-direction: row;
+            height: 2vw;
+            width: 40%;
+            align-items: center;
+            justify-content: space-around;
+            position: relative;
+        }
+        nav button {
+            padding: 0.2vw;
+            text-align: center;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 0.2vw;
+            background-color: #008A8A;
+            color: white;
+            border: 0;
+        }
+        nav button:hover {
+            background-color: aquamarine;
+            color: black;
+        }
+        .description {
+            background-color: aquamarine;
+            color: black;
+            font-weight: bold;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding-left: 3vw;
+        }
+        .description .timer {
+            position: absolute;
+            top: 0;
+            right: 10vw;
+        }
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 80%;
+            border-left: dashed black 0.2vw;
+            border-right: dashed black 0.2vw;
+            z-index: 3;
+            position: relative;
+            flex: 1;
+        }
+        .search-bar {
+            margin-top: 2vw;
+            margin-bottom: 2vw;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .search-bar input {
+            width: 40%;
+            padding: 0.5vw;
+            border: solid 0.2vw #008A8A;
+            border-radius: 0.5vw;
+        }
+        .search-bar button {
+            padding: 0.5vw;
+            margin-left: 1vw;
+            border: none;
+            border-radius: 0.5vw;
+            background-color: #008A8A;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .search-bar button:hover {
+            background-color: aquamarine;
+            color: black;
+        }
+        .results {
+            display: none;
+            flex-direction: column;
+            width: 60%;
+            margin-top: 2vw;
+        }
+        .result-item {
+            padding: 1vw;
+            margin-bottom: 1vw;
+            border: solid 0.2vw #008A8A;
+            border-radius: 0.5vw;
+            background-color: white;
+            box-shadow: 0px 0px 10px #008A8A;
+        }
+        footer {
+            width: 100%;
+            height: 10vh;
+            background-color: #008A8A;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;    
+            box-shadow: 0px 0px 10px black;
+            position: relative;
+            bottom: 0;
+        }
+    </style>
+        <script src="scripts/aluno.js" defer></script>
+        <script src="scripts/padrao.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 onclick="javascript: document.location.href = '1.html'">CampusFlow</h1>
+            <div class="description">
+                <p class="name">Fulano de tal</p>
+                <p class="local">Campos de algum canto</p>
+                <p class="cursando">Tecnico em alguma coisa</p>
+                <div class="timer">timer: 1000</div>
+            </div>
+            <nav>
+                <div class="menu" onclick="myFunction(this), aside()">    
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+                <button class="docs">
+                    Documentação
+                </button>
+                <button onclick="aluno_ac()">
+                    Atividades d. Campo
+                </button>
+                <button class="direcao" onclick="dis_dire()">
+                    Direção
+                </button>
+            </nav>
+        </header>
+        <main>
+            <div class="search-bar">
+                <input type="text" placeholder="Pesquisar atividades...">
+                <button onclick="showResults()">Pesquisar</button>
+            </div>
+            <div class="results">
+                <div class="result-item">Bolsa de Iniciação Científica</div>
+                <div class="result-item">Projeto de Extensão</div>
+            </div>
+        </main>
+        <footer>
+            2024 CampusFlow. Todos os direitos reservados
+        </footer>
+    </div>
+
+    <script>
+        function showResults() {
+            document.querySelector('.results').style.display = 'flex';
+        }
+    </script>
+</body>
+</html>
