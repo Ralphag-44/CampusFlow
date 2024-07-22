@@ -30,6 +30,12 @@ nav {
 {   margin-left: 3vw;
 }
 
+.timer
+{   position: absolute;
+    top: 0;
+    right: 10vw;
+}
+
 .navBtns .modoAluno:hover,.navBtns a:hover{
     background-color: aquamarine;
     color: black;
