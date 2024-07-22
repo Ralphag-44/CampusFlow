@@ -22,7 +22,8 @@ nav {
 }
 
 .descricao
-{   background-color: aquamarine;
+{   display:flex;
+    background-color: aquamarine;
     color: black;
     font-weight: bold;
     position: relative;
