@@ -20,6 +20,16 @@ nav {
     align-items: center;
 }
 
+.descricao
+{   background-color: aquamarine;
+    color: black;
+    font-weight: bold;
+    position: relative;
+}
+.descricao p
+{   margin-left: 3vw;
+}
+
 .navBtns .modoAluno:hover,.navBtns a:hover{
     background-color: aquamarine;
     color: black;
