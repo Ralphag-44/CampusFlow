@@ -1,0 +1,191 @@
+nav {
+    display: flex;
+    padding: 1vw;
+}
+
+.navBtns{
+    display: flex;
+}
+
+.navBtns p,.navBtns a {
+    color: white;
+    text-decoration: none;
+    margin-left: 10vw;
+    margin-top: 8px;
+    padding: 2px;
+    padding-inline: 6px;
+    font-weight:bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navBtns .modoAluno:hover,.navBtns a:hover{
+    background-color: aquamarine;
+    color: black;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.navMenuBtn{
+    margin-left: 5vw;
+    cursor: pointer;
+    width: 4vw;
+    height: 6vh;
+    display: flex;
+    border-radius: 5px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.navMenuBtn:hover{
+    .bar1, .bar2, .bar3{
+        background-color: black;
+    }
+    background-color: aquamarine;
+
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color:aquamarine;
+    margin: 2.8px 20px;
+    transition: 0.4s;
+}
+
+.navMenu{
+    display: flex;
+    flex-direction: column;
+    position:absolute;
+    background-color: #008A8A;
+    width: 0;
+    height: 100vh;
+    align-self: start;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.navMenu a{
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    margin-top: 5vh;
+    margin-left: 10%;
+    padding: 5px;
+    width: 80%;
+    border-bottom: 1px solid white;
+    font-weight: bold;
+}
+
+.navMenu a:hover{
+    background-color: aquamarine;
+    color: black;
+    border-color: black;
+}
+
+.menuOpen{
+    display: flex;
+    width: 30vw;
+}
+
+.closeBtn{
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    margin-left: 10%;
+    margin-top: 10%;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+    width: 8%;
+}
+
+.closeBtn:hover{
+    color: black;
+    background-color: aquamarine;
+}
+
+/*-------------Main--------------*/
+
+.content{
+    display: flex;  
+    border: 2px dashed black;
+
+    width: 80vw;
+    height: 70vh;
+}
+
+.caixa_de_mensagens{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 90%;
+    margin-top: 2%;
+    margin-left: 2%;
+    text-align: center;
+}
+
+.caixa_de_mensagens div{
+    background-color: #008A8A;
+    text-align:left;
+    border: solid 1px black;
+    overflow-y:scroll;
+}
+
+.caixa_de_mensagens p{
+    color: white;
+    border-bottom: solid 1px white;
+    width: 90%;
+    padding: 2px;
+    padding-top: 2vh;
+    font-size: 20px;
+}
+
+.caixa_de_mensagens p:hover{
+    color: black;
+    border-color: black;
+    background-color: aquamarine;
+    cursor:pointer;
+}
+
+.profile{
+    background-color: #008A8A;
+    margin: 2%;
+    width: 30%;
+
+}
+
+.pictureFrame{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aquamarine;
+    margin: 5%;
+    margin-inline: 12%;
+
+    border-radius: 5px;
+
+    height: 65%;
+    width: 75%;
+}
+
+.ProfileData{
+    background-color:  aquamarine;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.ProfileData .Data{
+    display: flex;
+    padding: 0.5vh;
+    color: black;
+    font-weight: bold;
+}
+
+.answer{
+    color: black;
+    font-weight: 200;
+    margin-left: 2%;
+}

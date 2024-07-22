@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+html, body {
+    height: 100%;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+header {
+    background-color: #008A8A;
+    box-shadow: 0px 0px 10px black;
+    color: white;
+    width: 100%;
+}
+header h1 {
+    margin-left: 1vw;
+    cursor: pointer;
+}
+nav {
+    display: flex;
+    flex-direction: row;
+    height: 2vw;
+    width: 40%;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+nav button {
+    padding: 0.2vw;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 0.2vw;
+    background-color: #008A8A;
+    color: white;
+    border: 0;
+}
+nav button:hover {
+    background-color: aquamarine;
+    color: black;
+}
+main {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    width: 80%;
+    border-left: dashed black 0.2vw;
+    border-right: dashed black 0.2vw;
+    z-index: 3;
+    position: relative;
+    padding: 2vw;
+    flex-grow: 1;
+}
+.adminInfo {
+    background-color: aquamarine;
+    color: black;
+    font-weight: bold;
+    width: 30%;
+    padding: 2vw;
+    border-radius: 1vw;
+    box-shadow: 0px 0px 10px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.photo {
+    width: 60%;
+    height: 20vw;
+    margin: auto;
+    background-image: url(no_picture.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+}
+.description2 {
+    width: 100%;
+    text-align: center;
+    margin-top: 1vw;
+}
+.messageBox {
+    background-color: white;
+    width: 50%;
+    padding: 2vw;
+    border-radius: 1vw;
+    box-shadow: 0px 0px 10px black;
+}
+.messageBox h2 {
+    color: #008A8A;
+    margin-bottom: 1vw;
+}
+.messageBox textarea {
+    width: 100%;
+    height: 10vw;
+    padding: 1vw;
+    border-radius: 0.5vw;
+    border: 0.2vw solid #008A8A;
+    font-size: 1vw;
+    resize: none;
+}
+.sendOptions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1vw;
+}
+.sendOptions button {
+    padding: 0.5vw 1vw;
+    font-weight: bold;
+    border-radius: 0.5vw;
+    background-color: #008A8A;
+    color: white;
+    border: 0;
+    cursor: pointer;
+}
+.sendOptions button:hover {
+    background-color: aquamarine;
+    color: black;
+}
+footer {
+    width: 100%;
+    height: 10vh;
+    background-color: #008A8A;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 10px black;
+}

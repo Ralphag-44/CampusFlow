@@ -1,0 +1,299 @@
+body{
+    overflow: hidden;
+}
+
+nav {
+    display: flex;
+    padding: 1vw;
+}
+
+.navBtns{
+    display: flex;
+}
+
+.navBtns p,.navBtns a {
+    color: white;
+    text-decoration: none;
+    margin-left: 10vw;
+    margin-top: 8px;
+    padding: 2px;
+    padding-inline: 6px;
+    font-weight:bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navBtns .modoAluno:hover,.navBtns a:hover{
+    background-color: aquamarine;
+    color: black;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.Voltar{
+    color: white;
+    text-decoration: none;
+    text-align: center;
+
+    padding-top: 5px;
+    margin-top: 0px;
+    margin-left: 5vw;
+    width: 4vw;
+    height: 6vh;
+}
+
+.Voltar:hover{
+    background-color: aquamarine;
+    border-radius: 5px;
+    cursor: pointer;
+    color: black
+}
+
+
+
+.materiasMain{
+    background-color: #008A8A;
+    width: 80vw;
+    height: 65vh;
+    display: flex;
+}
+
+/*-----------------Menu Seletor-----------------*/
+
+.menuSelector{
+    width: 30%;
+    height: 90%;
+    background-color: aquamarine;
+    margin: 2%;
+    display: flex;
+    flex-direction: column;
+
+    border: 1px black;
+    border-style: solid solid none solid;
+}
+
+.selectorItem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+
+    border-bottom: solid 1px black;
+}
+
+.selectorItem:hover{
+    background-color: white;
+    cursor: pointer;
+}
+
+/*-----------------View-----------------*/
+
+.view{
+    width: 100%;
+    height: 90%;
+    overflow-y: hidden;
+    margin: 2%;
+}
+
+.viewItem{
+    width: 100%;
+    height: 100%;
+    display: none;
+    text-align: center;
+}
+
+/*-----------------Item Selecionado aparece-----------------*/
+
+
+.selected{
+    background-color: white;
+}
+
+.selectedItem{
+    display: flex;
+    flex-direction: column;
+    background-color: aquamarine;
+}
+
+/*---------------Materias--------------------*/
+
+.materias_And_Add{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.Materiais{
+    background-color: rgb(56, 179, 138);
+    height: 100%;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+}
+
+.Materiais a, .Materiais p{
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    border-bottom: 1px solid black;
+    border-inline: 1px solid black;
+}
+
+.Materiais a:hover, .Materiais p:hover{
+    background-color: aquamarine;
+}
+
+.MateriaisForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+
+    background-color: rgb(56, 179, 138);
+}
+
+.MateriaisForm textarea{
+    width: 80%;
+    padding: 25%;
+    display: flex;
+    text-align: center;
+}
+
+.MateriaisForm input{
+    margin-top: 25px;
+}
+
+/*---------------Menu Alunos--------------------*/
+
+
+.alunos{
+    display: block;
+    overflow-y: scroll;
+    background-color: rgb(56, 179, 138);
+}
+
+.alunos img{
+    width: 200px;
+    margin: 20px;
+}
+
+/*---------------Tabelas Presenças e Notas--------------------*/
+
+.tabelaPresenca, .tabelaNotas{
+    overflow-y: scroll;
+}
+
+table{
+    height: 100%;
+    background-color: rgb(56, 179, 138);
+    overflow-y: scroll;
+}
+
+table, th, td{
+    border: solid 2px black;
+    border-collapse:collapse;
+    height: 30px;
+    width: 100%;
+}
+
+th, td{
+    width: 100px;
+}
+
+td input{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: whitesmoke;
+    border: none;
+}
+
+/*---------------Tarefa--------------------*/
+
+.Tarefas_menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.Tarefas_menu_postatadas{
+    background-color: rgb(56, 179, 138);
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+}
+
+.Btn_menu_tarefa{
+    width: 100%;
+    height: 30px;
+    background-color: rgb(231, 230, 230);
+    border: 0.1px solid black;
+}
+
+.Btn_menu_tarefa:hover, .ativo{
+    background-color: white;
+}
+
+.lista_alunos{
+    overflow: hidden;
+    display: none;
+}
+
+.lista_alunos table{
+    background-color: white;
+}
+
+.lista_alunos tr td:first-child{
+    background-color: rgb(56, 179, 138);
+}
+
+.nova_tarefa_btn{
+    width: 15%;
+    margin-block: 5px;
+}
+
+.pop_up_tarefa{
+    display: flex;
+    position:absolute;
+    transform: translate(33vw,0);
+    transition: 1s;
+    width: 35vw;
+    height: 50vh;
+    background-color: whitesmoke;
+    border: solid 5px rgb(56, 179, 138);
+}
+
+.pop_up_tarefa h2{
+    margin-bottom: 20px;
+}
+
+.tarefa_form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.tarefa_form div{
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.tarefa_form div input{
+    width: 40%;
+}
+
+.container{
+    transition: 1s;
+}
